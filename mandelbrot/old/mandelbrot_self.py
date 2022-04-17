@@ -1,5 +1,4 @@
 from typing import List
-import numpy
 
 c_complex = complex(1+0.4j)
 print(c_complex)
@@ -18,6 +17,7 @@ def checkMandelbrot(c):
 
 def checkNumbers(l):
     complex_x0 = 0
+    complex_y0 = 0
     for i in range(1000):
         for i in range(1000):
             complex_x0 += complex(0.01)
