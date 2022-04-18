@@ -8,7 +8,6 @@ from alive_progress import alive_bar
 width = 700
 height = 400
 
-
 setup(width, height)
 
 #Check wheter w or h is bigger, to adapt to the bigger value, verhältnis
