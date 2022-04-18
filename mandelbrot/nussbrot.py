@@ -5,8 +5,8 @@ import colorsys
 import numpy as np
 from alive_progress import alive_bar
 
-width = 500
-height = 200
+width = 700
+height = 400
 
 
 setup(width, height)
@@ -41,7 +41,6 @@ def hsv_to_rgb(list_hsv):
     list_rgb = colorsys.hsv_to_rgb(list_hsv[0], list_hsv[1], list_hsv[2])
     list_rgb = list(map(lambda x: int(x*255), list_rgb))
     return list_rgb
-
 
 def drawNumber(x, y, col_val):
     penup()
