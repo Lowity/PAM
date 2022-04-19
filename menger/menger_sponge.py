@@ -1,4 +1,5 @@
 from turtle import *
+from alive_progress import alive_bar
 
 def drawSqaure(l):
     fillcolor("black")
