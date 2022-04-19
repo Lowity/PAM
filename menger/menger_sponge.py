@@ -1,6 +1,5 @@
 from turtle import *
 
-
 def drawSqaure(l):
     fillcolor("black")
     begin_fill()
@@ -13,7 +12,7 @@ def divisor(s):
     if s < 1:
         return s
     s = s/3
-    penup()
+    #penup()
     backward(2*s)
     right(90)
     forward(2*s)
@@ -26,14 +25,21 @@ def divisor(s):
 
         forward(s)
         left(90)
-    pendown()
+    forward(2*s)
+    left(90)
+    forward(2*s)
+    right(90)
 
-tracer(0,0)
-drawSqaure(90)
-divisor(150)
-hideturtle()
-update()
-mainloop()
+def menger(s):
+    tracer(0,0)
+    penup()
+    drawSqaure(s)
+    divisor(s)
+    hideturtle()
+    update()
+    mainloop()
+
+menger(100)
 
 
 
