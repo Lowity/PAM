@@ -30,7 +30,7 @@ penup()
 setpos(-200, 200)
 pendown()
 tracer(0,0)
-exec_levy(levy(10))
+exec_levy(levy(20))
 update()
 mainloop()
 
