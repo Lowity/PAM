@@ -66,29 +66,29 @@ def drawNumber(x, y, col_val):
     if col_val == 50:
         color[2] = 0
     color = hsv_to_rgb(color)
-    dot(1, color)
+    dot(10, color)
 
-def newton_color(x, y):
+def newton_color(x, y, zero_root_list):
     c = pix_to_complex(x, y, width, height)
-    zero_root_list = []
     numb = newton(0, 0, c)
     numb = round(abs(numb), 3)
     if numb not in zero_root_list:
         zero_root_list.append(numb)
     pos_n = zero_root_list.index(numb)
-    col = pos_n * 30
-    drawNumber(x, y, col)
+    drawNumber(x, y, pos_n)
 
-def newton_drawer(w, h):
+def newton_drawer(w, h, l):
     with alive_bar(w**2, title="Calculating...") as bar:
         for x in range(int(-(w/2)), int((w/2))):
             for y in range(int(-(w/2)), int((w/2))):
-                newton_color(x, y)
+                newton_color(x, y, l)
                 bar()
 
 
 tracer(0,0)
-newton_drawer(width, height)
+l = []
+newton_drawer(width, height, l)
+#newton_color(25, 25, l)
 hideturtle()
 update()
 mainloop()
