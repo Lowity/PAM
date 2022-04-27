@@ -18,7 +18,7 @@ if width > height:
 colormode(255)
 
 def calcMandelbrot(z, c, iter):
-    if iter < 50 and abs(z) < 2:
+    if iter < 50 and z.real**2 + z.imag**2 < 4:
         z = z**2 + c
         iter += 1
         return calcMandelbrot(z, c, iter)
